@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Boutique</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .video-header {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-header video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 2rem;
+        }
+
+        .banner {
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .cta {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .services {
+            background-color: #f1f3f5;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .service i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+
+        .contact {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .testimonials {
+            background-color: #e9ecef;
+            padding: 5rem 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            margin: 1rem;
+        }
+
+        .stat-item .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="video-header">
+    <video autoplay loop muted playsinline>
+        <source src="data/placeholder.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="header-content">
+            <h1>Ma Boutique</h1>
+            <p>Découvrez nos produits et services exceptionnels</p>
+        </div>
+    </div>
+</header>
+
+<section class="banner">
+    <div class="container" data-aos="fade-up">
+        <h2>Bienvenue dans notre univers</h2>
+        <p>Nous créons des expériences uniques pour nos clients</p>
+        <div class="stats">
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                <div class="number">1000+</div>
+                <div>Clients satisfaits</div>
+            </div>
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="number">50+</div>
+                <div>Produits exclusifs</div>
+            </div>
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="number">24/7</div>
+                <div>Support client</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container" data-aos="zoom-in">
+        <h2>Prêt à commencer votre aventure ?</h2>
+        <a href="#contact" class="btn" id="contactBtn">Contactez-nous</a>
+        <a href="https://buy.stripe.com/test_aEU15j40H8Jk8kEfYY" class="btn">Découvrir nos produits</a>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container">
+        <h2 data-aos="fade-up">Nos Services</h2>
+        <div class="service-grid">
+            <div class="service" data-aos="flip-left" data-aos-delay="100">
+                <i class="fas fa-magic"></i>
+                <h3>Design Créatif</h3>
+                <p>Des designs uniques et innovants pour votre marque</p>
+            </div>
+            <div class="service" data-aos="flip-left" data-aos-delay="200">
+                <i class="fas fa-cogs"></i>
+                <h3>Solutions Sur Mesure</h3>
+                <p>Des solutions adaptées à vos besoins spécifiques</p>
+            </div>
+            <div class="service" data-aos="flip-left" data-aos-delay="300">
+                <i class="fas fa-chart-line"></i>
+                <h3>Stratégie de Croissance</h3>
+                <p>Boostez votre entreprise avec nos stratégies éprouvées</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <h2 data-aos="fade-up">Ce que disent nos clients</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client 1">
+                <p>"Un service exceptionnel et des produits de qualité. Je recommande vivement !"</p>
+                <h4>Marie D.</h4>
+            </div>
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 2">
+                <p>"L'équipe est très professionnelle et à l'écoute. Une expérience client parfaite."</p>
+                <h4>Thomas L.</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up" style="">
+        <h2 style="text-align: center">Contactez-nous</h2>
+        <form>
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message" rows="5" required></textarea>
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const contactBtn = document.getElementById('contactBtn');
+        const contactSection = document.getElementById('contact');
+
+        contactBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            contactSection.scrollIntoView({behavior: 'smooth'});
+        });
+    });
+</script>
+</body>
+</html>
